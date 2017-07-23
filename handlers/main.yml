@@ -1,4 +1,10 @@
 ---
+- name: enable redis
+  systemd:
+    daemon_reload: yes
+    enabled: yes
+    name: redis
+
 - name: start redis
   service:
     name: redis
