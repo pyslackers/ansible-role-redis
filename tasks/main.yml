@@ -3,8 +3,12 @@
   apt:
     pkg: redis-server
     state: latest
-  notify:
-    - enable redis
+
+- name: enable redis
+  systemd:
+    daemon_reload: yes
+    enabled: yes
+    name: redis
 
 - name: configure redis
   template:
