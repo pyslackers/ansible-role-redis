@@ -4,11 +4,6 @@
     pkg: redis-server
     state: latest
 
-# - name: enable redis
-#   service:
-#     enabled: yes
-#     name: redis
-
 - name: configure redis
   template:
     src: etc/redis/redis.conf.j2
