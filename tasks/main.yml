@@ -5,8 +5,7 @@
     state: latest
 
 - name: enable redis
-  systemd:
-    daemon_reload: yes
+  service:
     enabled: yes
     name: redis
 
